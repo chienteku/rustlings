@@ -24,6 +24,22 @@ fn main() {
     for handle in handles {
         // TODO: Collect the results of all threads into the `results` vector.
         // Use the `JoinHandle` struct which is returned by `thread::spawn`.
+        // Option 1: use `unwrap`
+        // results.push(handle.join().unwrap());
+
+        // Option 2: use `expect`
+        // results.push(handle.join().expect("Thread panicked"));
+
+        // // Option 3: use pattern matching
+        match handle.join() {
+            Ok(value) => results.push(value),
+            Err(e) => println!("Thread panicked: {:?}", e),
+        }
+
+        // Option 4: use `if let`
+        // if let Ok(value) = handle.join() {
+        //     results.push(value);
+        // }
     }
 
     if results.len() != 10 {
