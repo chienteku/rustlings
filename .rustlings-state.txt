@@ -1,6 +1,6 @@
 DON'T EDIT THIS FILE!
 
-clippy2
+try_from_into
 
 intro1
 intro2
@@ -85,3 +85,8 @@ threads1
 threads2
 threads3
 clippy1
+clippy2
+clippy3
+using_as
+from_into
+from_str
