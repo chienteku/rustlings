@@ -1,6 +1,7 @@
+// TODO: Understand how lifetimes work with structs and methods.
 
-struct TextSplitter<'b>{
-    delimiter: &'b str
+struct TextSplitter<'b> {
+    delimiter: &'b str,
 }
 
 impl<'b> TextSplitter<'b> {
@@ -40,10 +41,10 @@ mod tests {
         let text1 = "a, b, c";
         let splitter = TextSplitter { delimiter: "," };
         assert_eq!(splitter.split(text1), vec!["a", " b", " c"]);
-        
+
         let splitter2 = TextSplitter { delimiter: ", " };
         assert_eq!(splitter2.split(text1), vec!["a", "b", "c"]);
-    
+
         let text2 = "一 二 三";
         let splitter3 = TextSplitter { delimiter: " " };
         assert_eq!(splitter3.split(text2), vec!["一", "二", "三"]);

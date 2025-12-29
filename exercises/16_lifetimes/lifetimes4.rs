@@ -1,11 +1,12 @@
-fn split<'a, 'b>(text: &'a str, delimiter:&'b str) -> Vec<&'a str> {
+// TODO: Fix the lifetime annotations in this function.
+fn split<'a, 'b>(text: &'a str, delimiter: &'b str) -> Vec<&'a str> {
     let mut last_split = 0;
     let mut matches: Vec<&str> = vec![];
-    for i in 0..text.len(){
+    for i in 0..text.len() {
         if i < last_split {
             continue;
         }
-        if text[i..].starts_with(delimiter){
+        if text[i..].starts_with(delimiter) {
             matches.push(&text[last_split..i]);
             last_split = i + delimiter.len();
         }
@@ -14,7 +15,6 @@ fn split<'a, 'b>(text: &'a str, delimiter:&'b str) -> Vec<&'a str> {
         matches.push(&text[last_split..]);
     }
     matches
-
 }
 
 fn main() {

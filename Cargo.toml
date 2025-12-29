@@ -189,6 +189,8 @@ bin = [
   { name = "try_from_into_sol", path = "solutions/23_conversions/try_from_into.rs" },
   { name = "as_ref_mut", path = "exercises/23_conversions/as_ref_mut.rs" },
   { name = "as_ref_mut_sol", path = "solutions/23_conversions/as_ref_mut.rs" },
+  { name = "patterns1", path = "exercises/24_pattern_matching/patterns1.rs" },
+  { name = "patterns1_sol", path = "solutions/24_pattern_matching/patterns1.rs" },
 ]
 
 [package]

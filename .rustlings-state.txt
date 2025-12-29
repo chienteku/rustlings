@@ -1,6 +1,6 @@
 DON'T EDIT THIS FILE!
 
-as_ref_mut
+patterns1
 
 intro1
 intro2
@@ -96,3 +96,4 @@ from_into
 from_str
 try_from_into
 as_ref_mut
+patterns1
